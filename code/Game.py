@@ -1,22 +1,23 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
+from tkinter import Menu
+
 import pygame
 
 
 class Game:
     def __init__(self):
-        self.window = None
+        pygame.init()
+        self.window = pygame.display.set_mode((600, 480))
 
     def run(self, ):
-        pygame.init()
-        print('Satup Start')
-        window = pygame.display.set_mode((600, 480))
-        print('Satup Finish')
-
-        print('Loop Start')
         while True:
+            menu = Menu(self.window)
+            menu.run()
+            pass
+
             # Check for all events
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    pygame.quit()  # Close Window
-                    quit()  # end pygame
+            # for event in pygame.event.get():
+            # if event.type == pygame.QUIT:
+            # pygame.quit()  # Close Window
+            # quit()  # end pygame
